@@ -14,6 +14,7 @@ import dohieu.com.recycleview.adapter.Adapter;
 import dohieu.com.recycleview.model.Model;
 
 public class MainActivity extends AppCompatActivity {
+    //khai bao
     RecyclerView recyclerView;
     List<Model> modelList;
     Adapter adapter;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//      Khoi tao
         recyclerView = findViewById(R.id.rcHome);
 
         modelList = new ArrayList<>();
@@ -30,18 +31,19 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(modelList);
 
         recyclerView.setAdapter(adapter);
-        GridLayoutManager luoi = new GridLayoutManager(this, 2);
+//         kieu du lieu hien thi
+        GridLayoutManager luoi = new GridLayoutManager(this, 3);
 
         LinearLayoutManager doc = new LinearLayoutManager(this);
 
         LinearLayoutManager ngang = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
 
-        recyclerView.setLayoutManager(ngang);
+        recyclerView.setLayoutManager(luoi);
 
         fakedata();
     }
-
+// Ham tao
     private void fakedata() {
         for (int i = 0; i < 20; i++) {
             modelList.add(new Model(i + "", R.drawable.ic_launcher_background));

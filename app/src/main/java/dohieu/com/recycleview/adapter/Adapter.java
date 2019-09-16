@@ -1,5 +1,4 @@
 package dohieu.com.recycleview.adapter;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +14,9 @@ import dohieu.com.recycleview.R;
 import dohieu.com.recycleview.model.Model;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+//    Khai bao
     private List<Model> modelList;
-
+// Khoi tao constructor
     public Adapter(List<Model> modelList) {
         this.modelList = modelList;
     }
@@ -24,9 +24,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_recycle, parent, false);
-        return new ViewHolder(view);
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_recycle, parent, false);
+            return new ViewHolder(view);
     }
 
     @Override
