@@ -16,8 +16,14 @@
 
     <ImageView
         android:id="@+id/IMG"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_launcher_foreground" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_start_color" />
 
 </LinearLayout>
