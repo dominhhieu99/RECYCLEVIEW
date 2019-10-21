@@ -22,7 +22,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     //    Khai bao
     private List<Model> modelList;
     RecyclerView recyclerViewtest;
-    private List<Test> testList;
     TestAdapter testAdapter;
     private Context context;
 
@@ -48,14 +47,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.tvID.setText(model.getTvId());
         holder.IMG.setImageResource(model.getImageView());
 
-        testList = new ArrayList<>();
-        testAdapter = new TestAdapter(testList);
+        testAdapter = new TestAdapter(model.getTestList());
         recyclerViewtest.setAdapter(testAdapter);
-        LinearLayoutManager ngang = new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false);
-
         LinearLayoutManager doc = new LinearLayoutManager(context);
-        recyclerViewtest.setLayoutManager(ngang);
-        fakedata();
+        recyclerViewtest.setLayoutManager(doc);
     }
 
     @Override
@@ -76,10 +71,4 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
     }
 
-    // Ham tao
-    private void fakedata() {
-        for (int i = 0; i < 10; i++) {
-            testList.add(new Test("HieuDm" + i));
-        }
-    }
 }

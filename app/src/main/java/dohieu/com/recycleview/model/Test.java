@@ -1,6 +1,7 @@
 package dohieu.com.recycleview.model;
 
 public class Test {
+
     private String tvName;
 
     public String getTvName() {

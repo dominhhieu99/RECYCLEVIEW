@@ -18,10 +18,7 @@ import dohieu.com.recycleview.model.Test;
 public class MainActivity extends AppCompatActivity {
     //khai bao
     RecyclerView recyclerView;
-    RecyclerView recyclerViewtest;
     List<Model> modelList;
-    List<Test> testList;
-    TestAdapter testAdapter;
     Adapter adapter;
 
     @Override
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         modelList = new ArrayList<>();
 
-        adapter = new Adapter(modelList,this);
+        adapter = new Adapter(modelList, this);
 
         recyclerView.setAdapter(adapter);
 //         kieu du lieu hien thi
@@ -51,8 +48,41 @@ public class MainActivity extends AppCompatActivity {
 
     // Ham tao
     private void fakedata() {
-        for (int i = 0; i < 20; i++) {
-            modelList.add(new Model(i + "", R.drawable.ic_launcher_foreground));
-        }
+
+        List<Test> tests = new ArrayList<>();
+        tests.add(new Test("1"));
+        tests.add(new Test("2"));
+        tests.add(new Test("3"));
+        modelList.add(new Model(1 + "", R.drawable.ic_launcher_foreground, tests));
+
+
+        List<Test> tests2 = new ArrayList<>();
+        tests2.add(new Test("1"));
+        tests2.add(new Test("2"));
+
+        modelList.add(new Model(2 + "", R.drawable.ic_launcher_foreground, tests2));
+
+        List<Test> tests3 = new ArrayList<>();
+        tests3.add(new Test("1"));
+        tests3.add(new Test("2"));
+        tests3.add(new Test("3"));
+        tests3.add(new Test("1"));
+        tests3.add(new Test("2"));
+        tests3.add(new Test("3"));
+        modelList.add(new Model(3 + "", R.drawable.ic_launcher_foreground, tests3));
+
+        List<Test> tests4 = new ArrayList<>();
+        tests4.add(new Test("1"));
+        tests4.add(new Test("2"));
+        tests4.add(new Test("3"));
+        tests4.add(new Test("1"));
+        tests4.add(new Test("2"));
+        tests4.add(new Test("3"));
+        tests4.add(new Test("1"));
+        tests4.add(new Test("2"));
+        tests4.add(new Test("3"));
+
+        modelList.add(new Model(4 + "", R.drawable.ic_launcher_foreground, tests4));
+
     }
 }
